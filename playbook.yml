@@ -6,7 +6,7 @@
     local_action: 
       module: get_url
       url: http://speedtest.newark.linode.com/100MB-newark.bin
-      dest: "{{ playbook_dir }}"/newark.bin
+      dest: "{{ playbook_dir }}/newark.bin"
   
   - name: What is in the playbook_dir?
     local_action:
