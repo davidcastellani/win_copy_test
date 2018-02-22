@@ -10,7 +10,7 @@
   
   - name: What is in the playbook_dir?
     local_action:
-      module: command "ls {{ playbook_dir }}"
+      module: command ls {{ playbook_dir }}
     register: playbookdircontents
     
   - debug:
