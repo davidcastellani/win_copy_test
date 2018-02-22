@@ -10,9 +10,7 @@
   
   - name: What is in the playbook_dir?
     local_action:
-      module: find
-      paths: "{{ playbook_dir }}"
-      recurse: yes
+      module: command "ls {{ playbook_dir }}"
     register: playbookdircontents
     
   - debug:
