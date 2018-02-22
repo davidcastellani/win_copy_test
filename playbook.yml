@@ -5,8 +5,8 @@
   - name: Download asset
     local_action: 
       module: get_url
-      url: http://speedtest.newark.linode.com/100MB-newark.bin
-      dest: "{{ playbook_dir }}/newark.bin"
+      url: http://speedtest-ny.turnkeyinternet.net/1000mb.bin
+      dest: "{{ playbook_dir }}/1000mb.bin"
   
   - name: What is in the playbook_dir?
     local_action:
@@ -19,5 +19,5 @@
   
   - name: win_copy to windows host
     win_copy:
-      src: "{{ playbook_dir }}/newark.bin"
+      src: "{{ playbook_dir }}/1000mb.bin"
       dest: C:\webapps\
