@@ -13,3 +13,7 @@
       module: find
       paths: "{{ playbook_dir }}"
       recurse: yes
+    register: playbookdircontents
+    
+  - debug:
+      var: playbookdircontents
