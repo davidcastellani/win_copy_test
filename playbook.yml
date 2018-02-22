@@ -1,5 +1,10 @@
 ---
 - hosts: all
+  
   tasks:
-  - name: ping
-    win_ping:
+  - name: Download asset
+    local_action: 
+      module: get_url
+      url: http://speedtest.newark.linode.com/100MB-newark.bin
+      dest: "{{ playbook_dir }}"/newark.bin
+    become: false:
