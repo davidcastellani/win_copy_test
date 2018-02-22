@@ -16,3 +16,8 @@
   - debug:
       var: "{{ item }}"
     with_items: playbookdircontents.stdout_lines
+  
+  - name: win_copy to windows host
+    win_copy:
+      src: "{{ playbook_dir }}/newark.bin"
+      dest: C:\webapps\
