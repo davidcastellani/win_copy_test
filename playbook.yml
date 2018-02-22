@@ -7,4 +7,9 @@
       module: get_url
       url: http://speedtest.newark.linode.com/100MB-newark.bin
       dest: "{{ playbook_dir }}"/newark.bin
-    become: false:
+  
+  - name: What is in the playbook_dir?
+    local_action:
+      module: find
+      paths: "{{ playbook_dir }}"
+      recurse: yes
