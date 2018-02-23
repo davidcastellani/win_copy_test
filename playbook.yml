@@ -18,15 +18,15 @@
       var: "{{ item }}"
     with_items: playbookdircontents.stdout_lines
   
-  - name: set_fact for winrm to 5985
-    set_fact:
-      ansible_port: 5985
+#  - name: set_fact for winrm to 5985
+#    set_fact:
+#      ansible_port: 5985
   
   - name: win_copy to windows host
     win_copy:
       src: "{{ playbook_dir }}/100mb.zip"
       dest: C:\webapps\
 
-  - name: set_fact for winrm to 5986
-    set_fact:
-      ansible_port: 5986
+#  - name: set_fact for winrm to 5986
+#    set_fact:
+#      ansible_port: 5986
