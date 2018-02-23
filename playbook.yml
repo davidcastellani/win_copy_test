@@ -5,8 +5,9 @@
   - name: Download asset
     local_action: 
       module: get_url
-      url: http://speedtest-ny.turnkeyinternet.net/1000mb.bin
-      dest: "{{ playbook_dir }}/1000mb.zip"
+      #url: http://speedtest-ny.turnkeyinternet.net/1000mb.bin
+      url: http://speedtest-ny.turnkeyinternet.net/100mb.bin
+      dest: "{{ playbook_dir }}/100mb.zip"
   
   - name: What is in the playbook_dir?
     local_action:
@@ -23,7 +24,7 @@
   
   - name: win_copy to windows host
     win_copy:
-      src: "{{ playbook_dir }}/1000mb.zip"
+      src: "{{ playbook_dir }}/100mb.zip"
       dest: C:\webapps\
 
   - name: set_fact for winrm to 5986
