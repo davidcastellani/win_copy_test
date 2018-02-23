@@ -33,4 +33,4 @@
   - name: set_fact for winrm to 5986
     set_fact:
       ansible_port: 5986
-      ansible_winrm_scheme: http
+      ansible_winrm_scheme: https
